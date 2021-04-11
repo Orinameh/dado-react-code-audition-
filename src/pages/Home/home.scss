@@ -1,0 +1,181 @@
+@import '../../styles/breakpoint.scss';
+
+.home {
+    margin: 2em 8em;
+
+    @include for-size(phone-only) {    
+        margin: 5px;
+     }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #18214D;
+        @include for-size(phone-only) {    
+            flex-direction: column; 
+         }
+
+        >h3 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 33.89px;
+            font-family: Inter;
+
+        }
+
+        &-left {
+            display: flex;
+            justify-content: space-between;
+            gap: 3em;
+
+            >p {
+                font-weight: 400;
+                line-height: 28px;
+                font-size: 20px;
+                font-family: 'Inter';
+            }
+        }
+    }
+
+    &__valueProp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2em;
+
+        >h1 {
+            font-size: 72px;
+            line-height: 80px;
+            font-weight: 600;
+            margin: 0 4em;
+            color: #18214D;
+            font-family: Inter;
+            text-align: center;
+
+            @include for-size(phone-only) {    
+                font-size: 56px;
+                line-height: 62px;
+                margin: 0;
+             }
+
+        }
+
+        >p {
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            margin: 1em 19em;
+            color: #3E4462;
+            font-family: 'Inter';
+            @include for-size(phone-only) {    
+                margin: 0px;
+             }
+
+        }
+
+    }
+
+    &__search {
+        display: flex;
+        justify-content: center;
+        margin: 3em 5em;
+
+        @include for-size(phone-only) {    
+            flex-direction: column;
+            margin: 2em;
+         }
+
+        &>input[type='search'] {
+            background: #DFE4EA;
+            border-radius: 8px;
+            width: 100%;
+            height: 58px;
+            border: 0;
+            font-size: 20px;
+            padding-inline-start: 1.2em;
+
+            &:focus {
+                border: 2px solid #18214D;
+                outline: 0;
+                border-radius: 8px;
+            }
+
+            @include for-size(phone-only) {    
+                margin-bottom: 1em;
+             }
+
+
+        }
+
+        &>button {
+            background: #F3663F;
+            border-radius: 8px;
+            color: #fff;
+            border: 0;
+            width: 210px;
+            height: 58px;
+            font-size: 20px;
+            margin-left: 1em;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            @include for-size(phone-only) {    
+                margin: 0px;
+                width: 100%;
+             }
+
+        }
+    }
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        >p {
+            margin-top: -1em;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #3E4462;
+            font-family: 'Inter';
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: row;
+            align-items: 'center';
+            gap: 2em;
+            @include for-size(phone-only) {  
+                flex-direction: column;
+
+             }
+
+           > button {
+            padding: 8px 16px;
+            position: static;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            background: #29335C;
+            border-radius: 8px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 10px 0px;
+            color: #FFFFFF;
+            outline: none;
+            border: 0px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: Inter;
+            font-style: normal;
+           }
+        }
+    }
+}

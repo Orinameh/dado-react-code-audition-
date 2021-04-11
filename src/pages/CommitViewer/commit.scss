@@ -1,0 +1,170 @@
+@import '../../styles/breakpoint.scss';
+
+.commit {
+    &__header {
+        background: #EFF2F6;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 2em;
+        align-items: center;
+
+        >h3 {
+            margin: 0px 6em;
+            font-size: 28px;
+            font-weight: 700;
+            color: #18214D;
+            font-family: Inter;
+            font-style: normal;
+        }
+        
+
+        @include for-size(phone-only) {    
+            grid-template-columns: 0;
+            padding: 1em;
+
+            > h3 {
+                margin-left: 2em;
+            }
+         }
+    }
+
+    &__search {
+        display: flex;
+        justify-content: center;
+        margin: 3em 15em;
+        
+        @include for-size(phone-only) {    
+            display: none;
+         }
+        &>input[type='search'] {
+            background: #DFE4EA;
+            border-radius: 8px;
+            width: 100%;
+            height: 58px;
+            border: 0;
+            font-size: 20px;
+            padding-inline-start: 1.2em;
+
+            &:focus {
+                border: 2px solid #18214D;
+                outline: 0;
+                border-radius: 8px;
+            }
+
+        }
+
+        &>button {
+            background: #F3663F;
+            border-radius: 8px;
+            color: #fff;
+            border: 0;
+            width: 240px;
+            height: 58px;
+            font-size: 20px;
+            margin-left: 1em;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px
+        }
+    }
+
+    &__value {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        color: #29335C;
+        margin-top: 1em;
+        font-family: Inter;
+        font-style: normal;
+    }
+
+    &__loading {
+        >p {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            letter-spacing: -0.4px;
+            color: #18214D;
+        }
+    }
+
+    &__items {
+        margin: 3em 10em;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-items: center;
+        gap: 2em;
+
+        @include for-size(phone-only) {    
+            margin: 6em 3em;
+         }
+
+        &-user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            @include for-size(phone-only) {    
+                flex-direction: row; 
+                margin-top: 3em;
+             }
+
+            >img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+
+            >h5 {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+                letter-spacing: -0.55px;
+                color: #18214D;
+                margin-top: 1em;
+                margin-bottom: 0em;
+            }
+        }
+
+        &-message{
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.4px;
+            color: #18214D;
+            @include for-size(phone-only) {    
+                margin-top: -2em;
+                margin-left: -10em;
+                margin-bottom: 10em;
+                margin-right: -7em;
+             }
+        }
+        &-time {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.4px;
+            color: #18214D;
+
+            @include for-size(phone-only) {    
+                flex-direction: row; 
+                margin-top: 1em;
+             }
+
+           
+        }
+    }
+}
